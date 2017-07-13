@@ -1,0 +1,22 @@
+<h3> Color Tool </h3>
+
+<div>
+  <ul>
+    <li *ngFor="let color of colors">
+      {{color}}
+    </li>
+  </ul>
+</div>
+
+<div>
+  <div>
+    <label for="newColor">New Color</label>
+    <input type="text" name="newColor" [(ngModel)]="newColor" (keyup.enter)="addNewColor()" />
+  </div>
+  <div>
+    New Color : {{newColor}}
+  </div>
+  <div>
+    <button (click)="addNewColor()">Add</button>
+  </div>
+</div>
